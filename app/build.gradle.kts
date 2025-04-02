@@ -42,4 +42,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.google.maps)
     implementation(libs.google.places)
+    implementation(libs.volley)
 }
