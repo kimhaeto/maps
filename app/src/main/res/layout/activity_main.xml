@@ -32,11 +32,22 @@
             android:text="Search" />
     </LinearLayout>
 
-    <!-- 지도 Fragment -->
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@id/search_bar"
+        android:layout_above="@+id/hospital_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/search_bar" />
+        android:layout_height="match_parent" />
+
+    <!-- 추가: 병원 카드 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hospital_list"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:background="#FFFFFF"
+        tools:listitem="@layout/item_hospital_card" />
 </RelativeLayout>
